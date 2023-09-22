@@ -11,12 +11,226 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
-  font-size: 1.6rem;
+  font-family: "Open San", "Arial", sans-serif;
   font-weight: 400;
-  line-height: 1.2;
+  font-size: 1.6rem;
+  line-height: 2;
+  color: #000;
+}
+
+h1, h2, h3, h4 {
+  color: #F6D464;
+  font-family: "Playfair Display SC", "Georgia", serif;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.header-and-hero-wrapper {
+  background-image: linear-gradient(rgba(128, 128, 128, 0.5), rgba(128, 128, 128, 0.5)), url("../images/jpg/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 0 0 1.6rem 0;
+}
+@media only screen and (max-width: 576px) {
+  .header-and-hero-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.arrow-bottom {
+  display: none;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 576px) {
+  .arrow-bottom {
+    display: flex;
+  }
+}
+.arrow-bottom img {
+  width: 42px;
+  height: 22px;
+}
+
+.header {
+  background-color: #fff;
+  padding: 1.6rem 0;
+}
+@media only screen and (max-width: 576px) {
+  .header {
+    background-color: transparent;
+    padding: 3.2rem 0 0 0;
+  }
+}
+.header .container {
+  display: flex;
+  align-items: center;
+}
+.header__logo {
+  margin-right: auto;
+  display: flex;
+}
+.header__logo img:first-child {
+  width: 170px;
+  height: 38px;
+  display: none;
+}
+@media only screen and (max-width: 576px) {
+  .header__logo img:first-child {
+    display: block;
+  }
+}
+.header__logo img:last-child {
+  width: 266px;
+  height: 60px;
+  display: block;
+}
+@media only screen and (max-width: 576px) {
+  .header__logo img:last-child {
+    display: none;
+  }
+}
+.header__phone-numbers {
+  display: flex;
+  align-items: center;
+  gap: 3.4rem;
+  margin-right: 4rem;
+}
+@media only screen and (max-width: 1080px) {
+  .header__phone-numbers {
+    display: none;
+  }
+}
+.header__phone-numbers li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.header__phone-numbers img {
+  width: 18px;
+  height: 18px;
+}
+.header__languages {
+  display: flex;
+  align-items: center;
+  margin-right: 4rem;
+}
+@media only screen and (max-width: 576px) {
+  .header__languages {
+    display: none;
+  }
+}
+.header__languages li {
+  line-height: normal;
+  padding: 0.4rem;
+  color: #808080;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  text-transform: uppercase;
+}
+.header__languages-active {
+  border: 1px solid #808080;
+}
+@media only screen and (max-width: 576px) {
+  .header__menu-btn {
+    filter: invert(1);
+  }
+}
+
+.hero {
+  padding: 19rem 0 27rem 0;
+  text-align: center;
+}
+@media only screen and (max-width: 576px) {
+  .hero {
+    padding: 0;
+  }
+}
+.hero__title {
+  font-size: 9.6rem;
+  font-weight: 700;
+  line-height: normal;
+  color: #fff;
+  text-shadow: 0px 0px 4px #606060;
+  margin-bottom: 0.4rem;
+}
+@media only screen and (max-width: 992px) {
+  .hero__title {
+    font-size: 6rem;
+    margin-bottom: 0.8rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .hero__title {
+    font-size: 3.5rem;
+    margin-bottom: 0.9rem;
+  }
+}
+.hero__subtitle {
+  width: 100%;
+  max-width: 523px;
+  color: #fff;
+  font-family: "Open San", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: normal;
+  margin: 0 auto;
+  text-shadow: 0px 0px 4px #606060;
+}
+@media only screen and (max-width: 576px) {
+  .hero__subtitle {
+    font-size: 1.6rem;
+  }
 }/*# sourceMappingURL=main.css.map */
