@@ -77,6 +77,8 @@ ul, ol {
   background-size: cover;
   background-position: center;
   padding: 0 0 1.6rem 0;
+  position: relative;
+  overflow-x: hidden;
 }
 @media only screen and (max-width: 576px) {
   .header-and-hero-wrapper {
@@ -85,6 +87,7 @@ ul, ol {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-position: left;
   }
 }
 
@@ -233,4 +236,59 @@ ul, ol {
   .hero__subtitle {
     font-size: 1.6rem;
   }
+}
+
+.sidebar {
+  width: 100%;
+  max-width: 350px;
+  height: 100%;
+  background-color: #fff;
+  padding: 3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: transform 0.3s ease;
+  transform: translateX(100%);
+}
+.sidebar__close {
+  margin-bottom: 4rem;
+}
+.sidebar__title {
+  color: #F6D464;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.6rem;
+}
+.sidebar__nav-item {
+  border-top: 1px solid #808080;
+  padding: 1rem 0;
+}
+.sidebar__nav-item:last-child {
+  border-bottom: 1px solid #808080;
+}
+.sidebar__nav-item a {
+  text-transform: uppercase;
+}
+.sidebar__phones {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.4rem;
+  margin-bottom: 2rem;
+}
+.sidebar__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.sidebar.toggle {
+  transform: translateX(0%);
+  box-shadow: 0px 0px 70px 5px rgba(0, 0, 0, 0.35);
 }/*# sourceMappingURL=main.css.map */
